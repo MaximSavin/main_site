@@ -3,16 +3,32 @@ html, body {
         .uk-roadmap {
             ul {
                 li {
-                    font-family: $regular; margin-bottom: get-vw(24px); padding-left: 48px; position: relative; list-style: none; margin-left: 0;
-                    > p {color: rgba(255,255,255,1); font-family: $medium; margin: 0 0 get-vw(8px); letter-spacing: .06em; text-shadow: 0 0 5px #000;}
+                    font-family: $regular; margin-bottom: get-vw(24px); padding-left: get-vw(48px); position: relative; list-style: none; margin-left: 0;
+                    > p {
+                        color: rgba(255,255,255,1); font-family: $medium; margin: 0 0 get-vw(8px); letter-spacing: .06em; text-shadow: 0 0 get-vw(5px) #000;
+                        @media (max-width: 959px) {
+                            margin: 0 0 8px; text-shadow: 0 0 5px #000;
+                        }
+                    }
                     a {color: $blue;}
-                    &:before {content: ''; position: absolute; left: 0; top: get-vw(3px); width: get-vw(24px); height: get-vw(24px); background-image: url('@/assets/images/check-icon-roadmap.svg'); background-size: 100%; background-position: center; background-repeat: no-repeat; display: block;}
+                    &:before {
+                        content: ''; position: absolute; left: 0; top: get-vw(3px); width: get-vw(24px); height: get-vw(24px); background-image: url('../images/check-icon-roadmap.svg'); background-size: 100%; background-position: center; background-repeat: no-repeat; display: block;
+                        @media (max-width: 959px) {
+                            top: 3px; width: 24px; height: 24px;
+                        }
+                    }
                     &.uk-roadmap-danger {
-                        &:before {background-image: url('@/assets/images/check-icon-roadmap-danger.svg');}
+                        &:before {background-image: url('../images/check-icon-roadmap-danger.svg');}
                     }
                     li {
                         list-style: decimal; list-style-position: outside; margin-bottom: get-vw(8px); padding: 0; margin-left: get-vw(17px); line-height: get-vw(24px); color: rgba(255,255,255,.3);
                         &:before {display: none;}
+                        @media (max-width: 959px) {
+                            margin-bottom: 8px; margin-left: 17px; line-height: 24px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        margin-bottom: 24px; padding-left: 48px;
                     }
                 }
             }

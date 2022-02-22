@@ -11,7 +11,7 @@ const authData = await getAuth()
 const localAuthState = useStorage('auth', authData)
 const localUsersState = useStorage('users', JSON.stringify([]))
 
-console.log(localAuthState.value)
+// console.log(localAuthState.value)
 
 export const useAuthStore = defineStore("auth", {
   state: () => {

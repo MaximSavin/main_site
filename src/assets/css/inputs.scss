@@ -2,17 +2,76 @@ html, body {
     /* inputs - start */
     .uk-content, * {
         .uk-input {
-            line-height: get-vw(44px); background: rgba(255, 255, 255, 0.05); box-sizing: border-box; padding: get-vw(10px) get-vw(18px); font-size: get-vw(18px); line-height: get-vw(24px); font-family: $regular; border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; height: get-vw(46px); color: rgba(255,255,255,.4);
-            &:focus {box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); border-color: rgba(255,255,255,.2);}
+            /*line-height: get-vw(44px); */background: rgba(255, 255, 255, 0.05); box-sizing: border-box; padding: get-vw(10px) get-vw(18px); font-size: get-vw(18px); line-height: get-vw(24px); font-family: $regular; border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; height: get-vw(46px); color: rgba(255,255,255,.4);
+            &:focus {
+                box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); border-color: rgba(255,255,255,.2);
+                @media (max-width: 959px) {
+                    box-shadow: 0 0 40px rgba(255,255,255,.2);
+                }
+            }
+            @media (max-width: 959px) {
+                line-height: 24px; padding: 10px 18px; font-size: 18px; box-shadow: 0 0 40px rgba(255,255,255,0); backdrop-filter: blur(20px); border-radius: 10px; height: 46px;
+            }
         }
         .uk-form-icon {
             position: absolute; left: get-vw(18px); width: get-vw(18px); height: get-vw(18px); top: 50%; transform: translateY(-50%); z-index: 1;
             &.uk-form-icon-flip {
                 left: auto; right: get-vw(18px);
+                @media (max-width: 959px) {
+                    right: 18px;
+                }
             }
-            ~ .uk-input {padding-right: get-vw(48px)!important;}
+            ~ .uk-input {
+                padding-right: get-vw(48px)!important;
+                @media (max-width: 959px) {
+                    padding-right: 48px!important;
+                }
+            }
             &:not(.uk-form-icon-flip) {
-                ~ .uk-input {padding-left: get-vw(48px)!important; padding-right: get-vw(18px)!important;}
+                ~ .uk-input {
+                    padding-left: get-vw(48px)!important; padding-right: get-vw(18px)!important;
+                    @media (max-width: 959px) {
+                        padding-left: 48px!important; padding-right: 18px!important;
+                    }
+                }
+            }
+            &.uk-form-name {
+                ~ .uk-input {
+                    font-size: get-vw(24px); line-height: get-vw(28px); border-color: transparent; background: rgba(255,255,255,0); backdrop-filter: none; text-transform: uppercase; color: rgba(255,255,255,1); letter-spacing: .1em!important; padding: 0; transition: all 300ms ease-in-out;
+                    &:focus {
+                        border: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(get-vw(20px)); padding: get-vw(10px) get-vw(18px);
+                        &+ #size-calibration {
+                            padding-left: get-vw(18px);
+                            @media (max-width: 959px) {
+                                padding-left: 18px;
+                            }
+                        }
+                        @media (max-width: 959px) {
+                            padding: 10px 18px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        font-size: 24px; line-height: 28px; backdrop-filter: none;
+                    }
+                }
+            }
+            @media (max-width: 959px) {
+                left: 18px; width: 18px; height: 18px;
+            }
+        }
+        .uk-form-name-container {
+            height: get-vw(46px); min-width: get-vw(180px);
+            #size-calibration {
+                visibility: hidden; white-space: pre; height: get-vw(46px); display: block; padding-right: get-vw(46px); transition: all 300ms ease-in-out;
+                @media (max-width: 959px) {
+                    height: 46px; padding-right: 46px;
+                }
+            }
+            #autosized-input {
+                position: absolute; left: 0; width: 100%;
+            }
+            @media (max-width: 959px) {
+                height: 46px; min-width: 180px;
             }
         }
         .checkbox-button {
@@ -20,10 +79,20 @@ html, body {
             .knobs, .layer {
                 position: absolute; top: 0; right: 0; bottom: 0; left: 0;
             }
-            .layer {border-radius: get-vw(22px); width: 100%; background-color: rgba(255,255,255,.1); transition: 0.3s ease all; z-index: 1;}
+            .layer {
+                border-radius: get-vw(22px); width: 100%; background-color: rgba(255,255,255,.1); transition: 0.3s ease all; z-index: 1;
+                @media (max-width: 959px) {
+                    border-radius: 22px;
+                }
+            }
             .knobs {
                 z-index: 2; transition: 0.3s ease all;
-                &:before {content: ""; position: absolute; top: get-vw(2px); left: get-vw(2px); width: get-vw(18px); height: get-vw(18px); color: #fff; font-size: get-vw(10px); font-weight: bold; text-align: center; line-height: 1; padding: 0; background-color: rgba(255,255,255,.3); border-radius: 50%; transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;}
+                &:before {
+                    content: ""; position: absolute; top: get-vw(2px); left: get-vw(2px); width: get-vw(18px); height: get-vw(18px); color: #fff; font-size: get-vw(10px); font-weight: bold; text-align: center; line-height: 1; padding: 0; background-color: rgba(255,255,255,.3); border-radius: 50%; transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+                    @media (max-width: 959px) {
+                        left: 2px; width: 18px; height: 18px; top: 2px; font-size: 10px;
+                    }
+                }
             }
             .checkbox {
                 position: relative; width: 100%; height: 100%; padding: 0; margin: 0; opacity: 0; cursor: pointer; z-index: 3;
@@ -31,10 +100,16 @@ html, body {
                     &+ .knobs {
                         &:before {
                             content: ""; left: get-vw(24px); background-color: #fff;
+                            @media (max-width: 959px) {
+                                left: 24px;
+                            }
                         }
                     }
                     &~ .layer {background-color: #26D16E;}
                 }
+            }
+            @media (max-width: 959px) {
+                width: 44px; height: 22px; border-radius: 22px;
             }
         }
         .inline-checkbox {
@@ -42,8 +117,16 @@ html, body {
             input {
                 opacity: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0;
                 &+ span {
-                    background: transparent; border: get-vw(2px) solid rgba(255,255,255,.5); border-radius: get-vw(4px); display: block; position: absolute; left: 0; top: 0; width: get-vw(22px); height: get-vw(22px); transition: all 300ms ease-in-out; box-sizing: border-box;
-                    &:before {content: ''; display: block; width: get-vw(10px); height: get-vw(10px); background-image: url('@/assets/images/check-checkbox.svg'); opacity: 0; transition: all 150ms ease-in-out; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(.5);}
+                    background: transparent; border: 2px solid rgba(255,255,255,.5); border-radius: get-vw(4px); display: block; position: absolute; left: 0; top: 0; width: get-vw(22px); height: get-vw(22px); transition: all 300ms ease-in-out; box-sizing: border-box;
+                    &:before {
+                        content: ''; display: block; width: get-vw(10px); height: get-vw(10px); background-image: url('../images/check-checkbox.svg'); opacity: 0; transition: all 150ms ease-in-out; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(.5);
+                        @media (max-width: 959px) {
+                            width: 10px; height: 10px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        border-radius: 4px; width: 22px; height: 22px;
+                    }
                 }
                 &:checked {
                     &+ span {
@@ -62,7 +145,12 @@ html, body {
                     }
                 }
             }
-            div {padding-left: get-vw(34px); position: relative; line-height: get-vw(22px); font-family: $semibold;}
+            div {
+                padding-left: get-vw(34px); position: relative; line-height: get-vw(22px); font-family: $semibold;
+                @media (max-width: 959px) {
+                    padding-left: 34px; line-height: 22px;
+                }
+            }
             &.uk-filter-block {
                 div {
                     padding-right: get-vw(34px);
@@ -72,8 +160,17 @@ html, body {
                         &.uk-block-green {background-color: $green;}
                         &.uk-block-orange {background-color: $orange;}
                         &.uk-block-purple {background-color: $purple;}
+                        @media (max-width: 959px) {
+                            width: 22px; height: 22px; border-radius: 4px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        padding-right: 34px;
                     }
                 }
+            }
+            @media (max-width: 959px) {
+                margin-bottom: 12px; line-height: 22px; font-size: 18px;
             }
         }
     }
