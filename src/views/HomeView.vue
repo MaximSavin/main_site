@@ -722,7 +722,6 @@ const localeImgUrl = computed(() => locale.value == 'ru'?ruSvg:enSvg)
               </div>
 
               <div class="uk-width-auto">
-                <a href="#autorization" class="uk-button uk-button-default uk-button-small" uk-toggle>Войти</a>
                 <button class="uk-button uk-button-default uk-button-small" @click="toggleAuthModalShow">Войти</button>
               </div>
 
