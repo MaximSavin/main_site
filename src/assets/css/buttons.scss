@@ -1,0 +1,337 @@
+html, body {
+    .uk-area-drop {
+        padding-left: 0px; padding-right: 0; background: rgba(255,255,255,0); border: 0; color: rgba($primary,1); box-shadow: none; position: relative; font-size: get-vw(22px); letter-spacing: 0em; cursor: pointer;
+        &+ .uk-dropdown {
+            background: 0 0; border: 0.0521vw solid rgba(255,255,255,.3); backdrop-filter: blur(get-vw(20px)); overflow: hidden; padding: 0;
+            li {
+                a {
+                    padding: get-vw(10px) get-vw(18px); line-height: get-vw(26px); font-size: get-vw(18px); color: rgba(255,255,255,1); background: rgba(255,255,255,.1);
+                }
+                &.uk-active {
+                    a {background: rgba(255,255,255,.2);}
+                }
+            }
+        }
+        &[aria-expanded*="true"] {
+            border-radius: get-vw(10px); background: rgba(255,255,255,0); color: rgba(255,255,255,1);
+            &:before {transform: translate(0,-50%) scaleY(-1);}
+            &+ .uk-dropdown {
+                
+                li {
+                    a {
+                        &:hover {background: rgba(255,255,255,.2);}
+                    }
+                }
+                &[class*=uk-dropdown-top] {margin: 0; border-radius: get-vw(10px);}
+                &[class*=uk-dropdown-bottom] {
+                    margin: 0; border-radius: get-vw(10px);
+                }
+            }
+        }
+        &:hover {
+            background: rgba(255,255,255,0);
+        }
+    }
+    .uk-button-group {
+        display: flex; justify-content: stretch; width: 100%;
+        > * {
+            width: 100%; flex-grow: 1; flex-basis: content;
+        }
+        .uk-button {
+            border-radius: 0; backdrop-filter: blur(1px); display: flex; align-items: center; justify-content: center;
+            &.uk-button-default {
+                border: 1px solid rgba(255,255,255,.2);
+                border-right-width: 0;
+                &:last-child {
+                    border-right-width: 1px;
+                    @media (max-width: 639px) {
+                        border-bottom-width: 1px;
+                    }
+                }
+                @media (max-width: 639px) {
+                    border-right-width: 1px; border-bottom-width: 0;
+                }
+            }
+            &:first-child {
+                border-radius: get-vw(10px) 0 0 get-vw(10px);
+                /*@media (max-width: 959px) {
+                    border-radius: 10px 0 0 10px;
+                }*/
+                @media (max-width: 959px) {
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            &:last-child {
+                border-radius: 0 get-vw(10px) get-vw(10px) 0;
+                /*@media (max-width: 959px) {
+                    border-radius: 0 10px 10px 0;
+                }*/
+                @media (max-width: 959px) {
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+            svg {
+                margin-right: get-vw(15px); max-height: get-vw(24px); width: get-vw(34px);
+                @media (max-width: 959px) {
+                    margin-right: 15px; max-height: 24px; width: 34px;
+                }
+            }
+        }
+        > .uk-button:nth-child(n+2), > div:nth-child(n+2) .uk-button {
+            @media (max-width: 959px) {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 959px) {
+            flex-direction: column;
+        }
+    }
+    input {
+        &.uk-button {
+            width: auto; cursor: pointer;
+            &::placeholder {color: $primary;}
+            &.uk-button-blue {
+                color: $primary;
+                &:hover {background: rgba($primary,.05); color: #fff; border: 0.0521vw solid rgba($primary,.8);}
+            }
+            &:hover {cursor: pointer;}
+        }
+        &[type="file"] {
+            cursor: pointer; z-index: 1;
+            &:hover {cursor: pointer;}
+        }
+    }
+    .uk-button {
+        padding: get-vw(10px) get-vw(32px); font-size: get-vw(20px); text-transform: uppercase; line-height: 144%; background-color: rgba(255,255,255,.9); color: #181818; font-family: $regular; border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2), inset 0px 0px get-vw(30px) rgba(255,255,255,0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: all 300ms ease-in-out; letter-spacing: 0.08em;
+        svg {width: get-vw(34px); max-height: get-vw(34px); height: auto;}
+        &.uk-button-svg-small {
+            svg {width: get-vw(16px); max-height: get-vw(16px); height: auto;}
+        }
+        &.uk-button-default {
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0); color: rgba(255,255,255,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 0px get-vw(30px) rgba(255,255,255,0);
+            svg {
+                path {transition: all 300ms ease-in-out;}
+            }
+            &:hover {
+                background: rgba(255,255,255,.2);
+            }
+            &.uk-button-hover-blue {
+                &:hover {
+                    background: rgba($primary, 0.05); border: 1px solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5), 0px 0px 0px rgba(255,255,255,0); color: $primary;
+                    svg {
+                        path, g {fill: rgba($primary,1)!important;}
+                    }
+                }
+            }
+        }
+        &.uk-button-primary {
+            background: rgba($primary,1); border: 1px solid rgba($primary,1); color: rgba(#121212,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); position: relative; overflow: hidden; font-family: $semibold;
+            &:before {content: ""; position: absolute; top: 0px; left: 0px; width: 110%; height: 102%; background-color: rgb(48, 178, 230); filter: brightness(1.07); opacity: 0; transform: translate3d(-100%, 0px, 0px); transition: transform 0.4s ease 0s, opacity 0.4s ease 0s; clip-path: polygon(0px 0px, 100% 0%, calc(100% - 1.0417vw) 100%, 0% 100%); z-index: 0;}
+            > * {z-index: 1; position: relative;}
+            svg {
+                transform: translateX(0); transition: all 400ms ease-in-out;
+                path {transition: all 300ms ease-in-out;}
+            }
+            &:hover {
+                background: rgba($primary,1); border: 1px solid rgba($primary,1); color: #121212;
+                svg {
+                    transform: translateX(get-vw(5px));
+                    //path {fill: #fff;}
+                }
+                &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
+            }
+        }
+        &.uk-button-warning {
+            background: rgba($warning,1); border: 1px solid rgba($warning,1); box-sizing: border-box; color: #121212; overflow: hidden; box-shadow: inset 0px 0px get-vw(30px) rgba($warning,0); font-family: $semibold;
+            &:before {content: ""; position: absolute; top: 0px; left: 0px; width: 110%; height: 102%; background-color: rgba($warning,1); filter: brightness(1.07); opacity: 0; transform: translate3d(-100%, 0px, 0px); transition: transform 0.4s ease 0s, opacity 0.4s ease 0s; clip-path: polygon(0px 0px, 100% 0%, calc(100% - 1.0417vw) 100%, 0% 100%); z-index: 0;}
+            > * {z-index: 1; position: relative;}
+            svg {
+                margin-left: get-vw(5px); margin-top: get-vw(-7px); margin-bottom: get-vw(-5px);
+                path {transition: all 300ms ease-in-out; fill: #121212}
+            }
+            &:hover {
+                /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #121212; border: 0.0521vw solid rgba($warning,1); background: rgba($warning,1);
+                &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
+                svg {
+                    //path {fill: #ffffff;}
+                }
+            }
+        }
+        &.uk-button-yellow {
+            background: rgba($warning,.05); border: 0.0521vw solid rgba($warning,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($warning, 0.5); color: $warning;
+            svg {
+                path {transition: all 300ms ease-in-out;}
+            }
+            &:hover {
+                background: rgba($warning,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($warning,.8);
+            }
+        }
+        &.uk-button-green {
+            background: rgba($green,.05); border: 0.0521vw solid rgba($green,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($green, 0.5); color: $green;
+            svg {
+                path {transition: all 300ms ease-in-out;}
+            }
+            &:hover {
+                background: rgba($green,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($green,.8);
+            }
+        }
+        &.uk-button-blue {
+            background: rgba($primary, 0.05); border: 1px solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
+            svg {
+                path {transition: all 300ms ease-in-out; fill: $blue; fill-opacity: 1;}
+            }
+            &:hover {
+                background: rgba($primary,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($primary,.8);
+                svg {
+                    path {fill: #fff;}
+                }
+            }
+        }
+        &.uk-button-red {
+            background: rgba($red, 0.05); border: 1px solid rgba($red,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($red, 0.5); color: $red;
+            svg {
+                path {transition: all 300ms ease-in-out; fill: $red; fill-opacity: 1;}
+            }
+            &:hover {
+                background: rgba($red,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($red,.8);
+                svg {
+                    path {fill: #fff;}
+                }
+            }
+        }
+        &.uk-padding-small-left {padding-left: get-vw(15px);}
+        &.uk-padding-small-right {padding-right: get-vw(15px);}
+        &[disabled], &.uk-disabled {
+            opacity: .2; cursor: default;
+            &:hover {
+                opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
+                svg {
+                    path, g {color: rgba(255,255,255,1);}
+                }
+            }
+        }
+        &:hover {background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);}
+        &.uk-button-drop {
+            padding-left: 0px; padding-right: get-vw(45px); background: rgba(255,255,255,0); border: 0; color: rgba($primary,1); box-shadow: none; position: relative; font-size: get-vw(22px); letter-spacing: 0em; backdrop-filter: none;
+            &:before {
+                content: ''; position: absolute; border: 0; background-image: url(@/assets/images/arrow-down.svg); display: block; width: get-vw(12px); background-size: contain; background-position: center; background-repeat: no-repeat; margin: 0; transform: translate(0,-50%) scaleY(1); height: get-vw(8px); right: get-vw(15px); top: 50%;
+                @media (max-width: 959px) {
+                    width: 12px; height: 8px; right: 15px;
+                }
+            }
+            &+ .uk-dropdown {
+                background: 0 0; border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(get-vw(20px)); overflow: hidden; padding: 0;
+                li {
+                    a {
+                        padding: get-vw(10px) get-vw(18px); line-height: get-vw(26px); font-size: get-vw(18px); color: rgba(255,255,255,1); background: rgba(255,255,255,.1);
+                        @media (max-width: 959px) {
+                            padding: 10px 18px; line-height: 26px; font-size: 18px;
+                        }
+                    }
+                    &.uk-active {
+                        a {background: rgba(255,255,255,.2);}
+                    }
+                }
+                @media (max-width: 959px) {
+                    backdrop-filter: blur(20px);
+                }
+            }
+            &[aria-expanded*="true"] {
+                border-radius: get-vw(10px); background: rgba(255,255,255,0); color: rgba(255,255,255,1);
+                &:before {transform: translate(0,-50%) scaleY(-1);}
+                &+ .uk-dropdown {
+                    li {
+                        a {
+                            &:hover {background: rgba(255,255,255,.2);}
+                        }
+                    }
+                    &[class*=uk-dropdown-top] {
+                        margin: 0; border-radius: get-vw(10px);
+                        @media (max-width: 959px) {
+                            border-radius: 10px;
+                        }
+                    }
+                    &[class*=uk-dropdown-bottom] {
+                        margin: 0; border-radius: get-vw(10px);
+                        @media (max-width: 959px) {
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                @media (max-width: 959px) {
+                    border-radius: 10px;
+                }
+            }
+            &:hover {
+                background: rgba(255,255,255,0);
+            }
+            @media (max-width: 959px) {
+                padding-right: 45px; font-size: 22px;
+            }
+        }
+        &.uk-button-link {
+            padding-left: 0; padding-right: 0; background-color: transparent; color: rgba(255,255,255,1); border: 0; box-sizing: border-box; box-shadow: none; backdrop-filter: blur(0); border-radius: 0; padding-right: get-vw(48px); display: flex; align-items: center; font-size: get-vw(15px); display: inline-flex; letter-spacing: 0.05em; font-family: $medium; font-weight: 500; position: relative;
+            &:before {
+                content: ''; display: inline-block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: get-vw(30px); height: get-vw(12px); background-image: url('@/assets/images/arrow-button.svg'); background-size: get-vw(30px); background-position: center; background-repeat: no-repeat;
+                @media (max-width: 959px) {
+                    width: 30px; height: 12px; background-size: 30px;
+                }
+            }
+            &:hover {color: rgba(255,255,255,.6);}
+            @media (max-width: 959px) {
+                padding-right: 48px; font-size: 18px;
+            }
+        }
+        &.uk-button-small {
+            line-height: get-vw(24px); box-sizing: border-box; padding: get-vw(10px) get-vw(32px); font-size: get-vw(20px); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
+            svg {
+                width: get-vw(16px); height: get-vw(16px);
+                @media (max-width: 959px) {
+                    width: 16px; height: 16px;
+                }
+            }
+            &.uk-padding-small-left {
+                padding-left: get-vw(14px)!important;
+                @media (max-width: 959px) {
+                    padding-left: 14px!important;
+                }
+            }
+            &.uk-padding-small-right {
+                padding-right: get-vw(14px)!important;
+                @media (max-width: 959px) {
+                    padding-right: 14px!important;
+                }
+            }
+            @media (max-width: 959px) {
+                line-height: 24px; padding: 10px 32px; font-size: 20px; backdrop-filter: blur(20px);
+            }
+        }
+        &.uk-button-medium {
+            line-height: get-vw(24px); box-sizing: border-box; padding: get-vw(11px) get-vw(32px); font-size: get-vw(20px); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
+            svg {
+                width: get-vw(21px); height: get-vw(21px);
+                @media (max-width: 959px) {
+                    width: 21px; height: 21px;
+                }
+            }
+            &.uk-padding-small-left {
+                padding-left: get-vw(16px)!important;
+                @media (max-width: 959px) {
+                    padding-left: 16px!important;
+                }
+            }
+            &.uk-padding-small-right {
+                padding-right: get-vw(16px)!important;
+                @media (max-width: 959px) {
+                    padding-right: 16px!important;
+                }
+            }
+            @media (max-width: 959px) {
+                line-height: 24px; padding: 11px 32px; font-size: 20px; backdrop-filter: blur(20px);
+            }
+        }
+        @media (max-width: 959px) {
+            padding: 10px 32px; font-size: 20px; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2), inset 0px 0px 30px rgba(255,255,255,0); backdrop-filter: blur(20px); border-radius: 10px;
+        }
+    }
+}

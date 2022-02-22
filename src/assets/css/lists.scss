@@ -1,0 +1,37 @@
+html, body {
+    .uk-content {
+        ol, ul {
+            padding: 0; margin: get-vw(24px) 0;
+            li {
+                padding: 0; list-style-position: inside; margin-top: get-vw(21px);
+                p {margin: get-vw(24px) 0;}
+            }
+        }
+        ul {
+            li {
+                list-style-type: square; padding-left: get-vw(10px); list-style-position: outside; margin-left: get-vw(20px);
+            }
+        }
+        ol {
+            list-style: none; counter-reset: li; padding-left: 0; position: relative; margin-top: 0; margin-bottom: get-vw(20px);
+            > li {
+                margin-bottom: get-vw(10px); padding-left: get-vw(30px); position: relative;
+                &:before {counter-increment: li; content: counters(li,".") ". "; position: absolute; left: 0; letter-spacing: .08em;}
+                ul {
+                    margin: get-vw(10px) 0 0 0;
+                }
+                > ol {
+                    margin-top: get-vw(10px);
+                    > li {
+                        padding-left: get-vw(55px);
+                        ol {
+                            > li {
+                                padding-left: get-vw(75px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

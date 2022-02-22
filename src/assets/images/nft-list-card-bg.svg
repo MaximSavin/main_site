@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="342"
+   height="480"
+   viewBox="0 0 90.487498 127"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="nft-list-card-bg.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.0482005"
+     inkscape:cx="32.436543"
+     inkscape:cy="375.40528"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0.089242787,75.328425"
+       orientation="1,0"
+       id="guide824" />
+    <sodipodi:guide
+       position="0.089242787,126.91076"
+       orientation="0,-1"
+       id="guide826" />
+    <sodipodi:guide
+       position="0.089242786,0.0075118852"
+       orientation="0,-1"
+       id="guide828" />
+    <sodipodi:guide
+       position="90.402944,0.0075118852"
+       orientation="1,0"
+       id="guide830" />
+    <sodipodi:guide
+       position="0.089242787,126.91076"
+       orientation="0.7071068,0.70710677"
+       id="guide1162" />
+    <sodipodi:guide
+       position="90.402944,126.91076"
+       orientation="0.70710661,-0.70710696"
+       id="guide1222" />
+    <sodipodi:guide
+       position="0.089242787,0.0075118852"
+       orientation="-0.70710748,0.70710608"
+       id="guide1311" />
+    <sodipodi:guide
+       position="90.402944,0.0075118852"
+       orientation="-0.70710729,-0.70710628"
+       id="guide1371" />
+    <sodipodi:guide
+       position="87.227941,3.182518"
+       orientation="0,-1"
+       id="guide1547" />
+    <sodipodi:guide
+       position="87.227941,3.182518"
+       orientation="1,0"
+       id="guide1549" />
+    <sodipodi:guide
+       position="87.22794,123.73576"
+       orientation="0,-1"
+       id="guide1551" />
+    <sodipodi:guide
+       position="3.2642426,123.73576"
+       orientation="1,0"
+       id="guide1553" />
+    <sodipodi:guide
+       position="63.540802,63.459198"
+       orientation="0,-1"
+       id="guide2170" />
+    <sodipodi:guide
+       position="45.246081,81.753921"
+       orientation="1,0"
+       id="guide2172" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2246">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2242" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2244" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2246"
+       id="linearGradient2248"
+       x1="45.246082"
+       y1="126.99249"
+       x2="86.119286"
+       y2="86.119286"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="color:#000000;fill:#000000;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       d="m 8.6035156,3.6484375 c -2.7235254,0 -4.9375,2.2139746 -4.9375,4.9375 V 118.49609 c 0,2.72353 2.2139746,4.9375 4.9375,4.9375 H 81.90625 c 2.723525,0 4.9375,-2.21397 4.9375,-4.9375 V 8.5859375 c 0,-2.7235254 -2.213975,-4.9375 -4.9375,-4.9375 z m 0,1.3222656 H 81.90625 c 2.013511,0 3.615234,1.6017231 3.615234,3.6152344 V 118.49609 c 0,2.01352 -1.601723,3.61524 -3.615234,3.61524 H 8.6035156 c -2.0135113,0 -3.6132812,-1.60172 -3.6132812,-3.61524 V 8.5859375 c 0,-2.0135113 1.5997699,-3.6152344 3.6132812,-3.6152344 z"
+       id="rect1080" />
+    <rect
+       style="fill:url(#linearGradient2248);stroke:none;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       id="rect2196"
+       width="45.156864"
+       height="63.451687"
+       x="45.246082"
+       y="63.540798" />
+  </g>
+</svg>

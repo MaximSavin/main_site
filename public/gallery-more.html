@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title></title>
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+
+    <body>
+        
+        <div class="uk-page-container">
+            <div class="uk-content">
+                <div class="top-nav" uk-sticky=""><!-- top: 800; animation: uk-animation-fade -->
+                    <div class="uk-container uk-container-expand">
+                        <div class="uk-grid uk-flex uk-flex-middle">
+                            <div class="uk-width-auto">
+                                <a href="/" class="logo">
+                                    <img src="images/logo-icon-color.svg" />
+                                    <img src="images/logo-text-color.svg" />
+                                </a>
+                            </div>
+                            <div class="uk-width-expand">
+                                <ul class="primary-nav uk-margin-left">
+                                    <li><a href="fun-club.html">Фан-клуб</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                    <li><a href="#">Гайды</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-auto">
+                                <div class="uk-grid uk-grid-small uk-flex uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <a href="#" class="uk-text-uppercase">Войти в игру</a>
+                                    </div>
+                                    <div class="uk-width-auto uk-margin-left">
+                                        <select>
+                                            <option data-thumb="images/ru.svg">RU</option>
+                                            <option data-thumb="images/en.svg">EN</option>
+                                        </select>
+                                    </div>
+                                    <div class="uk-width-auto uk-position-relative">
+                                        <div class="avatar uk-area-drop"></div>
+                                        <div uk-dropdown="mode: hover" class="uk-dropdown">
+                                            <ul class="uk-nav uk-dropdown-nav">
+                                                <li><!-- активный пункт класс uk-active -->
+                                                    <a href="balance.html">Баланс</a>
+                                                </li>
+                                                <li>
+                                                    <a href="referrals.html">Рефералы</a>
+                                                </li>
+                                                <li>
+                                                    <a href="inventory.html">Карточки NFT</a>
+                                                </li>
+                                                <li>
+                                                    <a href="profile.html">Настройки</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Зарегистрировать еще аккаунт</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#choose-account" uk-toggle>Сменить расу</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Выйти</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-section">
+                    <div class="uk-container">
+                        <div class="uk-grid uk-grid-medium" uk-grid>
+                            <div class="uk-width-1-1">
+                                <h1 class="uk-text-uppercase uk-text-center">Галерея NFT</h1>
+                            </div>
+                            <div class="uk-width-1-1 uk-margin-medium-top">
+                                <div class="uk-grid uk-grid-medium uk-flex uk-flex-center">
+                                    <div class="uk-width-3-4@m uk-width-1-1">
+                                        <p class="h5 uk-text-center uk-text-yellow uk-text-uppercase uk-margin-remove-bottom"><!-- доступные классы uk-text-yellow, uk-text-blue, uk-text-green, uk-text-purple -->
+                                            Легендарные карточки
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="uk-width-1-1 uk-margin-medium-top">
+                                <a href="gallery-list.html" class="uk-button uk-button-default uk-button-svg-small">
+                                    <svg class="uk-margin-small-right" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.255766 6.3785L6.03392 0.600203C6.19886 0.435262 6.4187 0.344726 6.6531 0.344726C6.88777 0.344726 7.10747 0.435392 7.27241 0.600203L7.79702 1.12495C7.96184 1.28963 8.05263 1.50959 8.05263 1.74413C8.05263 1.97853 7.96184 2.20591 7.79702 2.3706L4.42613 5.74891L15.1356 5.74891C15.6185 5.74891 16 6.12692 16 6.60991L16 7.35176C16 7.83475 15.6185 8.25087 15.1356 8.25087L4.38789 8.25087L7.79689 11.648C7.96171 11.813 8.0525 12.027 8.0525 12.2615C8.0525 12.4958 7.96171 12.7129 7.79689 12.8777L7.27228 13.4007C7.10734 13.5657 6.88763 13.6556 6.65297 13.6556C6.41857 13.6556 6.19873 13.5645 6.03379 13.3996L0.255637 7.62141C0.0903047 7.45595 -0.000620491 7.23508 2.99357e-05 7.00028C-0.00049075 6.76471 0.0903048 6.5437 0.255766 6.3785Z" fill="white"/></svg>вернуться к списку карточек
+                                </a>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <div class="uk-grid uk-grid-medium uk-flex uk-flex-center">
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-card uk-card-default">
+                                            <div class="uk-card-body">
+                                                <div class="uk-grid uk-grid-xmedium uk-child-width-1-6@m uk-child-width-1-3" uk-grid>
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    <!-- one nft item - start -->
+                                                    <div class="nft-list-item">
+                                                        <a href="#modal-nft-1" uk-toggle>
+                                                            <img src="images/card-commander.png" />
+                                                        </a>
+                                                        <div id="modal-nft-1" class="uk-flex-top uk-modal-container  uk-modal-container-medium" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                                                <div class="uk-modal-body">
+                                                                    <div class="uk-grid uk-grid-xmedium uk-child-width-1-2@s uk-child-width-1-1" uk-grid>
+                                                                        <div>
+                                                                            <img src="images/card-commander.png" width="100%" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <h3 class="uk-text-uppercase">Карта командора NFT COM 1683</h3>
+                                                                            <!-- one characteristic item - start -->
+                                                                            <div class="uk-grid uk-grid-xmedium uk-flex uk-flex-middle" uk-grid>
+                                                                                <div class="uk-width-auto uk-text-center">
+                                                                                    <img src="https://galaxyonline.io/images/nft/commanders/02-shield.png" width="50px">
+                                                                                    <div class="uk-text-center uk-margin-small-top">19.23%</div>
+                                                                                </div>
+                                                                                <div class="uk-width-expand">Броня</div>
+                                                                            </div>
+                                                                            <!-- one characteristic item - end -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- one nft item - end -->
+                                                    
+                                                    <div class="uk-width-1-1">
+                                                        <div class="uk-grid uk-grid-small">
+                                                            <div class="uk-width-auto">
+                                                                <a href="#" class="uk-button uk-button-default uk-button-small uk-padding-small-left uk-padding-small-right">
+                                                                    <svg width="16" height="16" viewBox="0 0 17 29" fill="none" version="1.1" id="svg4" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path d="M 0.72172781,15.5926 13.182118,28.0528 c 0.28819,0.2884 0.67291,0.4473 1.08312,0.4473 0.41021,0 0.79492,-0.1589 1.08312,-0.4473 l 0.91762,-0.9174 c 0.597104,-0.5978 0.597104,-1.5693 0,-2.1662 L 5.8026278,14.5059 16.277588,4.03093 c 0.288194,-0.28842 0.447316,-0.67291 0.447316,-1.08289 0,-0.41044 -0.159122,-0.79493 -0.447316,-1.08358 l -0.91762,-0.917164 c -0.28843,-0.288421 -0.67291,-0.447315 -1.08312,-0.447315 -0.41021,0 -0.79493,0.158894 -1.08312,0.447315 L 0.72172781,13.4189 c -0.2889,0.2893 -0.4476,0.6756 -0.4467,1.0863 -9e-4,0.4122 0.1578,0.7983 0.4467,1.0874 z" fill="white" id="path2" style="fill:#ffffff;fill-opacity:1"></path></svg>
+                                                                </a>
+                                                            </div>
+                                                            <div class="uk-width-auto uk-flex uk-flex-center uk-flex-middle">
+                                                                Страница 
+                                                                <span class="uk-margin-small-left uk-margin-small-right">1</span>
+                                                                <span class="uk-text-muted">
+                                                                    из<span class="uk-margin-small-left">12</span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="uk-width-auto">
+                                                                <a href="#" class="uk-button uk-button-default uk-button-small uk-padding-small-left uk-padding-small-right">
+                                                                    <svg width="16" height="16" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2782 15.5926L3.81781 28.0528C3.52962 28.3412 3.1449 28.5001 2.73469 28.5001C2.32448 28.5001 1.93977 28.3412 1.65157 28.0528L0.73395 27.1354C0.136846 26.5376 0.136846 25.5661 0.73395 24.9692L11.1973 14.5059L0.72234 4.03093C0.434146 3.74251 0.275024 3.35802 0.275024 2.94804C0.275024 2.5376 0.434146 2.15311 0.72234 1.86446L1.63996 0.947296C1.92839 0.658875 2.31287 0.499981 2.72308 0.499981C3.13329 0.499981 3.51801 0.658875 3.8062 0.947296L16.2782 13.4189C16.5671 13.7082 16.7258 14.0945 16.7249 14.5052C16.7258 14.9174 16.5671 15.3035 16.2782 15.5926Z" fill="white"></path></svg>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+						
+                    </div>
+
+                </div>
+                
+                <div class="uk-section uk-footer">
+                    <div class="uk-container uk-container-expand uk-padding-large-left uk-padding-large-right links">
+                        <div class="uk-grid uk-grid-medium" uk-grid>
+                            <div class="uk-width-1-1">
+                                <div class="uk-footer-border-block">
+                                    <div class="uk-grid uk-grid-small uk-flex uk-flex-middle" uk-grid>
+                                        <div class="uk-width-expand@s uk-width-1-1 uk-text-left@s uk-text-center">
+                                            <a href="#" class="logo">
+                                                <img src="images/logo-icon.svg" />
+                                                <img src="images/logo-text.svg" />
+                                            </a>
+                                        </div>
+                                        <div class="uk-width-auto@s uk-width-1-1 uk-text-left@s uk-text-center copyright">
+                                            Copyright © 2022 GalaxyOnline.io
+                                        </div>
+                                        <div class="uk-width-auto@s uk-width-1-1 uk-text-left@s uk-text-center">
+                                            <select>
+                                                <option data-thumb="images/ru.svg">RU</option>
+                                                <option data-thumb="images/en.svg">EN</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-1 uk-margin-medium-top">
+                                <div class="uk-grid" uk-grid>
+                                    <div class="uk-width-1-4@s uk-width-1-1">
+                                        <h6 class="uk-text-uppercase">О нас</h6>
+                                        <ul>
+                                            <li>
+                                                <a href="roadmap.html">Дорожная карта</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Телеграм-чат</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Телеграм-канал</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Медиум</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Youtube Канал</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дискорд</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-expand@s uk-width-1-1">
+                                        <h6 class="uk-text-uppercase">Документы</h6>
+                                        <ul>
+                                            <li>
+                                                <a href="branding.html">Брендинг</a>
+                                            </li>
+                                            <li>
+                                                <a href="dao.html">Создание DAO</a>
+                                            </li>
+                                            <li>
+                                                <a href="rules.html">Правила</a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                                            </li>
+                                            <li>
+                                                <a href="regulation.html">Пользовательское соглашение</a>
+                                            </li>
+                                            <li>
+                                                <a href="support.html">Центр поддержки</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-expand@s uk-width-1-1">
+                                        <h6 class="uk-text-uppercase">Навигация</h6>
+                                        <ul>
+                                            <li>
+                                                <a href="how-to-play.html">Как начать играть</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Гайды</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Галактический рынок</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Wiki</a>
+                                            </li>
+                                            <li>
+                                                <a href="fun-club.html">Фан-клуб</a>
+                                            </li>
+                                            <li>
+                                                <a href="tavern.html">Таверна</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-auto@s uk-width-1-1">
+                                        <h6 class="uk-text-uppercase">Ресурсы</h6>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.25 21.5C18.877 21.5 24.25 16.799 24.25 11C24.25 5.201 18.877 0.5 12.25 0.5C5.623 0.5 0.25 5.201 0.25 11C0.25 13.64 1.3645 16.055 3.205 17.9C3.0595 19.424 2.5795 21.095 2.0485 22.349C1.93 22.628 2.1595 22.94 2.458 22.892C5.842 22.337 7.8535 21.485 8.728 21.041C9.87687 21.3474 11.061 21.5017 12.25 21.5Z" fill="white"/></svg>
+                                                    Игровой чат
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <svg width="25" height="23" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 2.75C20.25 2.15326 20.4871 1.58097 20.909 1.15901C21.331 0.737053 21.9033 0.5 22.5 0.5C23.0967 0.5 23.669 0.737053 24.091 1.15901C24.5129 1.58097 24.75 2.15326 24.75 2.75V19.25C24.75 19.8467 24.5129 20.419 24.091 20.841C23.669 21.2629 23.0967 21.5 22.5 21.5C21.9033 21.5 21.331 21.2629 20.909 20.841C20.4871 20.419 20.25 19.8467 20.25 19.25V2.75ZM18.75 3.836C15.6495 5.261 11.9415 6.0575 8.25 6.32V15.6755C8.79486 15.7062 9.33898 15.7487 9.882 15.803C12.9615 16.109 15.939 16.805 18.75 18.143V3.836ZM6.75 15.5975V6.401C5.73 6.4415 4.6515 6.4655 3.738 6.4805C2.94351 6.49151 2.18513 6.81416 1.62624 7.37894C1.06735 7.94372 0.752677 8.70544 0.75 9.5L0.75 12.5C0.75 14.159 2.094 15.494 3.741 15.5135C3.98901 15.5166 4.23702 15.5206 4.485 15.5255C5.24026 15.5406 5.99531 15.5646 6.75 15.5975ZM8.835 17.219C9.2625 17.2505 9.6885 17.2895 10.11 17.336L10.4895 19.871C10.5308 20.0879 10.5237 20.3113 10.4687 20.5252C10.4137 20.7391 10.3121 20.9381 10.1712 21.1082C10.0304 21.2783 9.85372 21.4152 9.65385 21.5091C9.45398 21.603 9.23583 21.6516 9.015 21.6515H8.193C7.90143 21.6515 7.61619 21.5665 7.37217 21.4069C7.12815 21.2473 6.93592 21.0201 6.819 20.753L4.848 17.033C5.69438 17.0541 6.54045 17.0861 7.386 17.129C7.8765 17.1545 8.361 17.1845 8.835 17.219Z" fill="white"/></svg>
+                                                    Новостной канал
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <svg width="31" height="22" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.75 3.50708C23.6141 3.02231 23.3494 2.58342 22.984 2.23708C22.6083 1.88008 22.1478 1.62471 21.646 1.49508C19.768 1.00008 12.244 1.00008 12.244 1.00008C9.10734 0.964389 5.97144 1.12135 2.85401 1.47008C2.3522 1.60929 1.89257 1.87036 1.51601 2.23008C1.14601 2.58608 0.878007 3.02508 0.738007 3.50608C0.4017 5.31782 0.238299 7.15742 0.250007 9.00007C0.238007 10.8411 0.401007 12.6801 0.738007 14.4941C0.875007 14.9731 1.14201 15.4101 1.51301 15.7631C1.88401 16.1161 2.34601 16.3711 2.85401 16.5061C4.75701 17.0001 12.244 17.0001 12.244 17.0001C15.3847 17.0358 18.5246 16.8788 21.646 16.5301C22.1478 16.4004 22.6083 16.1451 22.984 15.7881C23.354 15.4351 23.617 14.9961 23.749 14.5181C24.0941 12.707 24.2619 10.8667 24.25 9.02307C24.276 7.17168 24.1084 5.32264 23.75 3.50608V3.50708ZM9.85201 12.4241V5.57707L16.112 9.00107L9.85201 12.4241Z" fill="white"/></svg>
+                                                    Youtube Канал
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <svg width="36" height="20" viewBox="0 0 256 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"><g><path d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z" fill="#ffffff"></path></g></svg>
+                                                    Medium
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="js/uikit.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script>
+            
+            function productStyles(selection) {
+                if (!selection.id) { return selection.text; }
+                var thumb = $(selection.element).data('thumb');
+                if(!thumb) {
+                    return selection.text;
+                } else {
+                    var $selection = $('<img src="' + thumb + '" alt=""><span class="img-changer-text">' + $(selection.element).text() + '</span>');
+                    return $selection;
+                }
+            }
+            
+            $(document).ready(function() {
+                $('select').select2({
+                    templateSelection: productStyles,
+                    minimumResultsForSearch: -1
+                });
+            });
+            
+            
+            
+            $('.hidedrop').click(function() {
+                $(this).parents('.tag-container').find('.uk-button-drop').html($(this).html());
+            });
+            
+        </script>
+    </body>
+</html>

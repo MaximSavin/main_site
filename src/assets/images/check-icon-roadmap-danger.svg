@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="check-icon-roadmap-danger.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="12.256518"
+     inkscape:cx="8.9748168"
+     inkscape:cy="13.258252"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4">
+    <sodipodi:guide
+       position="11.993619,26.692445"
+       orientation="1,0"
+       id="guide833" />
+    <sodipodi:guide
+       position="-1.2238387,11.924792"
+       orientation="0,-1"
+       id="guide835" />
+  </sodipodi:namedview>
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M11.052 0.0463202C7.05235 0.371475 3.48822 2.65681 1.51413 6.16193C-0.14398 9.10597 -0.45853 12.7099 0.660844 15.9377C1.25187 17.6419 2.13606 19.0655 3.42297 20.3847C7.02871 24.0812 12.5916 25.0507 17.2437 22.7934C19.754 21.5753 21.8399 19.4273 22.9515 16.9154C24.7816 12.78 24.1892 8.10013 21.3836 4.52895C20.7249 3.69052 19.4121 2.50454 18.4974 1.92162C17.4772 1.27152 16.214 0.715447 15.0949 0.423938C14.2446 0.202429 13.6796 0.107884 12.8174 0.042792C12.051 -0.0150905 11.8008 -0.0145792 11.052 0.0463202ZM13.5594 2.31412C14.5949 2.49835 15.3362 2.73372 16.2384 3.16477C20.026 4.97421 22.2418 8.98299 21.7475 13.1319C21.3424 16.5319 19.2628 19.4207 16.1691 20.8808C13.4956 22.1427 10.4368 22.1312 7.75893 20.8492C5.71453 19.8704 4.12607 18.283 3.15018 16.2432C2.71747 15.3389 2.48848 14.6177 2.29198 13.5406C2.16794 12.8609 2.16794 11.1524 2.29198 10.4726C2.48848 9.39553 2.71747 8.67435 3.15018 7.77007C4.61399 4.71057 7.48537 2.66909 10.9241 2.24294C11.4714 2.17509 13.0119 2.21671 13.5594 2.31412Z"
+     fill="#E65957"
+     id="path2" />
+  <circle
+     cx="12.037896"
+     cy="11.995897"
+     r="4"
+     fill="#e65957"
+     id="circle2" />
+</svg>

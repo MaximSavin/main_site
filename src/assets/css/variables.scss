@@ -1,0 +1,66 @@
+/* настройки - начало */
+
+$blue: #3692c7;
+$primary: #30b2e6;
+$warning: #f59e5a;
+$yellow: #ffc74c;
+$green: #0cb754;
+$orange: #feaf14;
+$purple: #b25fff;
+$red: #ec5151;
+
+@font-face {
+  font-family: "Rogan Light";
+  src: local("Rogan Light"), local("Rogan-Light"), url("@/assets/fonts/Rogan-Light.woff2") format("woff2"),
+    url("@/assets/fonts/Rogan-Light.woff") format("woff"), url("@/assets/fonts/Rogan-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rogan Regular";
+  src: local("Rogan Regular"), local("Rogan-Regular"), url("@/assets/fonts/Rogan-Regular.woff2") format("woff2"),
+    url("@/assets/fonts/Rogan-Regular.woff") format("woff"), url("@/assets/fonts/Rogan-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rogan Medium";
+  src: local("Rogan Medium"), local("Rogan-Medium"), url("@/assets/fonts/Rogan-Medium.woff2") format("woff2"),
+    url("@/assets/fonts/Rogan-Medium.woff") format("woff"), url("@/assets/fonts/Rogan-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rogan Semibold";
+  src: local("Rogan SemiBold"), local("Rogan-SemiBold"), url("@/assets/fonts/Rogan-SemiBold.woff2") format("woff2"),
+    url("@/assets/fonts/Rogan-SemiBold.woff") format("woff"), url("@/assets/fonts/Rogan-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rogan Bold";
+  src: local("Rogan Bold"), local("Rogan-Bold"), url("@/assets/fonts/Rogan-Bold.woff2") format("woff2"),
+    url("@/assets/fonts/Rogan-Bold.woff") format("woff"), url("@/assets/fonts/Rogan-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+$light: "Rogan Light", sans-serif;
+$regular: "Rogan Regular", sans-serif;
+$medium: "Rogan Medium", sans-serif;
+$semibold: "Rogan Semibold", sans-serif;
+$bold: "Rogan Bold", sans-serif;
+
+$ratio-1-1: 100%;
+$ratio-4-3: 75%;
+$ratio-8-5: 62.5%;
+$ratio-3-2: 66.66%;
+$ratio-16-9: 56.25%;
+$ratio-4-1: 25%;
+/* настройки - конец */
+
+$vw-viewport: 1920;
+@function get-vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return calc($font / $vw-context) * 1vw;
+  @return $font;
+}
