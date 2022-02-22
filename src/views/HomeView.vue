@@ -10,8 +10,6 @@ import AuthModal from "@/components/AuthModal.vue"
 import ruSvg from "@/assets/images/ru.svg"
 import enSvg from "@/assets/images/en.svg"
 
-console.log(ruSvg)
-
 const { t, locale, availableLocales } = useI18n({ useScope: "global" });
 const authModalShow = ref(false)
 
