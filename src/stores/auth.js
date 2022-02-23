@@ -28,10 +28,10 @@ export const useAuthStore = defineStore("auth", {
     async setUserData(userData) {
       this.userData = userData
       this.users = await wretch("https://api.galaxyonline.io/user/auth/telegram")
-        .headers({
+      .options({ mode: "no-cors" })
+      .headers({
           'X-CSRF-TOKEN': this.csrf
         })
-        .options({ mode: "no-cors" })
         .query({domain: ""})
         .post(userData)
         .error(500, (err) => console.log(err.status))
