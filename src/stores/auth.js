@@ -35,8 +35,10 @@ export const useAuthStore = defineStore("auth", {
         .query({ domain: "" })
         // .options({ mode: "no-cors" })
         // .options({ credentials: "cors", mode: "cors" })
+        .options({ credentials: "include", mode: "cors" })
         .post(userData)
         .error(500, (err) => console.log(err.status))
+        .error((err) => console.log(err.status))
         .json((json) => {
           localUsersState.value = JSON.stringify(json.users)
           return json.users
