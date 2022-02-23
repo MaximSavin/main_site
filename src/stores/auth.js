@@ -31,6 +31,7 @@ export const useAuthStore = defineStore("auth", {
         .headers({
           'X-CSRF-TOKEN': this.csrf
         })
+        .options({ mode: "cors" })
         .query({domain: ""})
         .post(userData)
         .error(500, (err) => console.log(err.status))
