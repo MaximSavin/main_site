@@ -1,0 +1,26 @@
+{
+  "message": {
+    "hello": "Hello English.",
+    "know_more": "Know more"
+  },
+  "fanclub": {
+    "type": {
+      "text": "Story",
+      "video": "Video",
+      "audio": "Audio",
+      "print": "Poster",
+      "pic": "Wallpaper",
+      "null": "Other"
+    }
+  },
+  "sections": {
+    "about_game": {
+      "title": "About game",
+      "p1": "Галактика Онлайн - это космическая онлайн стратегия с огромной мета-вселенной, состоящей из множества галактик, где идут безжалостные битвы между игроками за господство над планетами и богатыми территориями космоса.",
+      "p2": "Будь кем хочешь, делай что хочешь на заселенной части бескрайних просторов космоса!",
+      "play": "Play free"
+    },
+    "news": { "title": "News" },
+    "nft_collection": { "title": "Collection NFT" }
+  }
+}

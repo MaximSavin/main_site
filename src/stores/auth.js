@@ -62,5 +62,8 @@ export const useAuthStore = defineStore("auth", {
     cookies: (state) => {
       return state.authData.cookies
     },
+    isAuth: (state) => {
+      return state.authData.user.length == 0
+    }
   }
 });
