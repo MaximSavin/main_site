@@ -3,7 +3,9 @@ import { useStorage } from "@vueuse/core";
 import wretch from 'wretch'
 
 async function getAuth() {
-  return await wretch("https://api.galaxyonline.io/user/auth").get().json()
+  return await wretch("https://api.galaxyonline.io/user/auth")
+  .options({ credentials: "include", mode: "cors" })
+  .get().json()
 }
 
 const authData = await getAuth()
