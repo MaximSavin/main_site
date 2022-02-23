@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build --emptyOutDir --minify true",
     "preview": "vite preview --port 5050",
-    "test:unit": "vitest --environment jsdom"
+    "test:unit": "vitest --environment jsdom",
+    "build.serv": "vite build --outDir ../front/public/test/ --base /test/ --emptyOutDir --minify true"
   },
   "dependencies": {
     "@types/jquery": "^3.5.13",

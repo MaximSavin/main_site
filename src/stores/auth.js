@@ -29,11 +29,12 @@ export const useAuthStore = defineStore("auth", {
       this.userData = userData
       this.users = await wretch("https://api.galaxyonline.io/user/auth/telegram")
         .headers({
-          'X-CSRF-TOKEN': this.csrf
+          'X-CSRF-TOKEN': this.csrf,
+          'origin': 'https://galaxy-main.herokuapp.com/'
         })
         .query({ domain: "" })
         // .options({ mode: "no-cors" })
-        // .options({ mode: "cors" })
+        .options({ credentials: "cors", mode: "cors" })
         .post(userData)
         .error(500, (err) => console.log(err.status))
         .json((json) => {
