@@ -30,7 +30,7 @@ export const useAuthStore = defineStore("auth", {
       this.users = await wretch("https://api.galaxyonline.io/user/auth/telegram")
         .headers({
           'X-CSRF-TOKEN': this.csrf,
-          // 'origin': 'https://galaxy-main.herokuapp.com/'
+          'origin': 'https://api.galaxyonline.io/'
         })
         .query({ domain: "" })
         // .options({ mode: "no-cors" })
