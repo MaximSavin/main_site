@@ -1,14 +1,14 @@
 <script setup>
-import TelegramLogin from "@/components/TLogin.vue";
+import TelegramLogin from "@/components/TelegramLogin.vue";
 
-const emit = defineEmits(['toggleShow'])
+const emit = defineEmits(['closeAuth'])
 </script>
 
 <template>
-  <div class="uk-flex-top uk-modal-container uk-modal-container-small uk-modal uk-flex uk-open" @click.stop="emit('toggleShow')">
+  <div class="uk-flex-top uk-modal-container uk-modal-container-small uk-modal uk-flex uk-open" @click.stop="emit('closeAuth')">
     <div class="uk-modal-dialog uk-margin-auto-vertical" @click.stop>
       <!-- <button class="uk-modal-close-default" type="button" uk-close></button> -->
-      <button class="uk-modal-close-default uk-icon uk-close" type="button" @click="emit('toggleShow')">
+      <button class="uk-modal-close-default uk-icon uk-close" type="button" @click="emit('closeAuth')">
         <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
           <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
           <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
@@ -88,7 +88,7 @@ const emit = defineEmits(['toggleShow'])
                   Войти через near id
                 </a>
               </div> -->
-              <div class="uk-width-1-1"><TelegramLogin /></div>
+              <div class="uk-width-1-1"><TelegramLogin @closeAuth="emit('closeAuth')" /></div>
             </div>
           </div>
           <div class="uk-width-1-1">

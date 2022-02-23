@@ -20,6 +20,8 @@ const authModalShow = ref(false)
 const raceModalShow = ref(false)
 
 const toggleAuthModalShow = () => { authModalShow.value = !authModalShow.value }
+const showAuthModal = () => { authModalShow.value = true }
+const closeAuthModal = () => { authModalShow.value = false }
 const toggleRaceModalShow = () => { raceModalShow.value = !raceModalShow.value }
 
 const toggleLang = () => {
@@ -3886,7 +3888,7 @@ const localeImgUrl = computed(() => locale.value == 'ru'?ruSvg:enSvg)
   </div>
 
   <!-- авторизация -->
-  <AuthModal @toggleShow="toggleAuthModalShow" v-if="authModalShow"/>
+  <AuthModal @closeAuth="closeAuthModal" v-if="authModalShow"/>
 </template>
 
 <style>

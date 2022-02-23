@@ -1,5 +1,6 @@
 <script setup>
 import { useI18n } from "vue-i18n";
+import IconAbout from "./icons/IconAbout.vue";
 
 const { t, locale } = useI18n({ useScope: "global" });
 </script>
@@ -17,13 +18,7 @@ const { t, locale } = useI18n({ useScope: "global" });
       <ul uk-scrollspy-nav="closest: li a; scroll: true; cls: active; offset: '-30px';">
         <li data-slide="1">
           <a href="#section-1" class="nav-dot">
-            <!-- prettier-ignore -->
-            <svg width="26" height="26" viewBox="0 0 92 92" fill="none" version="1.1" id="svg6" xmlns="http://www.w3.org/2000/svg">
-              <g id="g4" style="fill:#fff;fill-opacity:1" transform="translate(-85.7 -85.7) scale(2.86269)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M44.7 30A16 16 0 0 0 31 51.4 16 16 0 1 0 44.8 30Zm3.4 3c1.4.3 2.3.6 3.6 1.2a13 13 0 0 1-1.1 24 13 13 0 1 1-2.5-25.1zm-2.6 4.4c-.8.3-1.1 1.2-.8 2 .4 1 1.8 1 2.5.1.3-.3.3-1 .1-1.4-.4-.7-1.2-1-1.8-.7zm0 4.4c-.4 0-.6.4-.8.7l-.1 5.7.1 5.7c.6 1.1 2 1.1 2.6 0l.1-5.7-.1-5.7c-.4-.7-1.2-1-1.8-.7z" fill="#fff" id="path2" style="fill:#fff;fill-opacity:1"/>
-              </g>
-            </svg>
-            <span>{{ t('sections.about_game.title') }}</span>
+            <IconAbout /><span>{{ t("sections.about_game.title") }}</span>
           </a>
         </li>
         <li data-slide="2">
@@ -32,7 +27,7 @@ const { t, locale } = useI18n({ useScope: "global" });
             <svg width="26" height="26" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.9 0C7.5.3 7 .7 7 1v12.2H5.4c-1.6.1-1.8.1-2.5.4-.8.4-1.6 1-2 1.7a6 6 0 0 0-.8 1.5l-.1.4V26l.1.5c.3.8.6 1.4 1.3 2 .5.6.7.7 1.2 1 1 .5 0 .4 12.8.4h11.7a5.6 5.6 0 0 0 4.5-3.6c.4-1.1.4-.4.4-13.4s0-12-.4-12.4C31.2 0 32 0 19.5 0H7.9Zm21.5 13.6v11.1l-.1.4c-.4 1-1.1 1.7-2.1 2-.3.2-1 .2-9.3.2-8.4 0-8.9 0-8.8-.1l.4-1.5V2.6h20v11ZM13.7 8c-.6.1-1 .6-1 1.2 0 .4.2.8.6 1l.3.3h8.8l.2-.2c1-.7.7-2-.4-2.3h-8.5Zm0 6.1c-.5.2-1 .6-1 1.1 0 .6.3 1.1.7 1.3l6 .1h5.8l.4-.1.5-.5c.3-.7.1-1.4-.6-1.8l-.2-.1H13.7ZM7 20.8v4.9l-.3.4c-.2.5-.5.8-1 1a2 2 0 0 1-1 .2c-.4 0-.5 0-.9-.2-.5-.2-.8-.5-1-1l-.2-.4v-8.2l.1-.4c.3-.5.8-1 1.3-1.2h3v4.9Zm6.7-.9c-.5.1-1 .5-1 1 0 .7.3 1.3.9 1.4h8.8l.2-.1c.4-.3.6-.7.6-1.2 0-.3 0-.4-.2-.6-.3-.3-.5-.4-.9-.5h-8.4Z" fill="#fff"/>
             </svg>
-            <span>{{ t('sections.news.title') }}</span>
+            <span>{{ t("sections.news.title") }}</span>
           </a>
         </li>
         <li data-slide="3">
@@ -41,7 +36,7 @@ const { t, locale } = useI18n({ useScope: "global" });
             <svg width="26" height="26" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="m16.1 3.5 13.1 7.6.1.2v15.3L16 34.2 2.8 26.6l-.1-.2V11.1L16 3.5h.2Zm-1.5-2.3c.8-.5 2-.5 2.8 0l13.2 7.6a3 3 0 0 1 1.4 2.5v15.1c0 1-.6 2-1.4 2.5l-13.2 7.6c-.8.5-2 .5-2.8 0L1.4 29A2.9 2.9 0 0 1 0 26.4V11.3c0-1 .6-2 1.4-2.5l13.2-7.6Zm-2 13.8h-1.8v4.4l-3-4.4H6v7.7h2v-4.4l3 4.4h1.6V15Zm1.2 7.7h1.8v-3.1h3v-1.5h-3v-1.6H19V15h-5.2v7.7Zm8.2-6.2h-2.3V15H26v1.5h-2.3v6.2H22v-6.2Z" fill="#fff"/>
             </svg>
-            <span>{{ t('sections.nft_collection.title') }}</span>
+            <span>{{ t("sections.nft_collection.title") }}</span>
           </a>
         </li>
         <li data-slide="4">

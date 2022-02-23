@@ -20,11 +20,14 @@ export default {
 <script setup>
 import { useAuthStore } from "@/stores/auth.js";
 
+const emit = defineEmits(['closeAuth'])
+
 const auth = useAuthStore();
 
 const onTelegramAuthNew = async (user) => {
   // console.log(user);
   auth.setUserData(user);
+  emit('closeAuth')
 };
 
 window.onTelegramAuthNew = onTelegramAuthNew;
