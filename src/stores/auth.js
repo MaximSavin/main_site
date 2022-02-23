@@ -28,11 +28,12 @@ export const useAuthStore = defineStore("auth", {
     async setUserData(userData) {
       this.userData = userData
       this.users = await wretch("https://api.galaxyonline.io/user/auth/telegram")
-      .options({ mode: "no-cors" })
-      .headers({
+        .headers({
           'X-CSRF-TOKEN': this.csrf
         })
-        .query({domain: ""})
+        .query({ domain: "" })
+        // .options({ mode: "no-cors" })
+        // .options({ mode: "cors" })
         .post(userData)
         .error(500, (err) => console.log(err.status))
         .json((json) => {
@@ -46,7 +47,7 @@ export const useAuthStore = defineStore("auth", {
         .headers({
           'X-CSRF-TOKEN': this.csrf
         })
-        .query({id})
+        .query({ id })
         .get().json()
       console.log(step2)
     }
