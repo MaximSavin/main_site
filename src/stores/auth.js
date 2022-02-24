@@ -4,8 +4,8 @@ import wretch from 'wretch'
 
 async function getAuth() {
   return await wretch("https://api.galaxyonline.io/user/auth")
-  .options({ credentials: "include", mode: "cors" })
-  .get().json()
+    .options({ credentials: "include", mode: "cors" })
+    .get().json()
 }
 
 const authData = await getAuth()
@@ -52,10 +52,22 @@ export const useAuthStore = defineStore("auth", {
         .headers({
           'X-CSRF-TOKEN': this.csrf
         })
+        .options({ credentials: "include", mode: "cors" })
         .query({ id })
         .get().json()
       console.log(step2)
-    }
+    },
+    async switchUsedId(id) {
+      this.selectedId = id
+      const switchUser = await wretch("https://api.galaxyonline.io/user/switch/login")
+        .headers({
+          'X-CSRF-TOKEN': this.csrf
+        })
+        .options({ credentials: "include", mode: "cors" })
+        .post({id}).json()
+      console.log(switchUser)
+    },
+    // user/auth/exit
   },
   getters: {
     csrf: (state) => {
@@ -65,7 +77,7 @@ export const useAuthStore = defineStore("auth", {
       return state.authData.cookies
     },
     isAuth: (state) => {
-      return state.authData.user.length == 0
+      return state.authData.user.length > 0
     }
   }
 });
