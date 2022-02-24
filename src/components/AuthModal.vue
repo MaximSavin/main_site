@@ -1,7 +1,7 @@
 <script setup>
 import TelegramLogin from "@/components/TelegramLogin.vue";
 
-const emit = defineEmits(['closeAuth'])
+const emit = defineEmits(['closeAuth', 'closeAuthChain'])
 </script>
 
 <template>
@@ -88,7 +88,7 @@ const emit = defineEmits(['closeAuth'])
                   Войти через near id
                 </a>
               </div> -->
-              <div class="uk-width-1-1"><TelegramLogin @closeAuth="emit('closeAuth')" /></div>
+              <div class="uk-width-1-1"><TelegramLogin @closeAuth="emit('closeAuthChain')" /></div>
             </div>
           </div>
           <div class="uk-width-1-1">

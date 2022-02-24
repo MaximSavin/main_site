@@ -25,7 +25,6 @@ const emit = defineEmits(['closeAuth'])
 const auth = useAuthStore();
 
 const onTelegramAuthNew = async (user) => {
-  // console.log(user);
   auth.setUserData(user);
   emit('closeAuth')
 };

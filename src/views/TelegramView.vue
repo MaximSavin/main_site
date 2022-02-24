@@ -3,7 +3,7 @@ import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import AuthModal from "@/components/AuthModal.vue";
 import TelegramLogin from "@/components/TelegramLogin.vue";
-import RaceModal from "@/components/RaceModal.vue";
+import AccountModal from "@/components/AccountModal.vue";
 import ruSvg from "@/assets/images/ru.svg";
 import enSvg from "@/assets/images/en.svg";
 
