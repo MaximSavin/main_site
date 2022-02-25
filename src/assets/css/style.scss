@@ -23,6 +23,7 @@ body {
   background-size: 100%;
   background-position: top center;
   background-repeat: repeat-y;
+  will-change: scroll-position;
   @media (max-width: 959px) {
     font-size: 22px;
     line-height: 150%;

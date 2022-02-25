@@ -18,14 +18,14 @@ export default {
 </script>
 
 <script setup>
-import { useAuthStore } from "@/stores/auth.js";
+import { useSessionStore } from "@/stores/auth.js";
 
 const emit = defineEmits(['closeAuth'])
 
-const auth = useAuthStore();
+const auth = useSessionStore();
 
 const onTelegramAuthNew = async (user) => {
-  auth.setUserData(user);
+  auth.telegramAuthStep1(user);
   emit('closeAuth')
 };
 

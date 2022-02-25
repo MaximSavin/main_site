@@ -4,7 +4,7 @@ import { onMounted, computed, ref } from "vue";
 import UIkit from "uikit";
 import $ from "jquery";
 import { useI18n } from "vue-i18n";
-import { useAuthStore } from "@/stores/auth.js";
+import { useSessionStore } from "@/stores/auth.js";
 import NewsItems from "@/components/NewsItems.vue";
 import FanClub from "@/components/FanClub.vue";
 import AuthModal from "@/components/AuthModal.vue"
@@ -14,7 +14,11 @@ import enSvg from "@/assets/images/en.svg"
 import LeftSideMenu from "@/components/LeftSideMenu.vue";
 import Preloader from "@/components/Preloader.vue";
 
-const auth = useAuthStore();
+const auth = useSessionStore();
+// console.log("is Auth?", auth.isAuth)
+// console.log("cookies", auth.cookies)
+// console.log("user", auth.user)
+// console.log("csrf", auth.csrf)
 
 const { t, locale, availableLocales } = useI18n({ useScope: "global" });
 const authModalShow = ref(false)
@@ -518,7 +522,7 @@ const localeImgUrl = computed(() => locale.value == 'ru'?ruSvg:enSvg)
           </div>
           <div class="uk-width-auto uk-visible@m">
             <div class="uk-grid uk-grid-small uk-flex uk-flex-middle" uk-grid>
-              <div class="uk-width-auto">
+              <div class="uk-width-auto" v-if="auth.isAuth">
                 <a href="https://space.galaxyonline.io/" class="uk-text-uppercase">Войти в игру</a>
               </div>
               <div class="uk-width-auto uk-margin-left">
@@ -526,11 +530,11 @@ const localeImgUrl = computed(() => locale.value == 'ru'?ruSvg:enSvg)
                 <img :src="localeImgUrl" style="width: 1.0416666667vw; margin: 0 5px;" />{{ locale }}</button>
               </div>
 
-              <div class="uk-width-auto">
+              <div class="uk-width-auto" v-if="!auth.isAuth">
                 <button class="uk-button uk-button-default uk-button-small" @click="toggleAuthModalShow">Войти</button>
               </div>
 
-              <div class="uk-width-auto uk-position-relative">
+              <div class="uk-width-auto uk-position-relative" v-if="auth.isAuth">
                 <div class="avatar uk-area-drop"></div>
                 <div uk-dropdown="mode: hover" class="uk-dropdown">
                   <ul class="uk-nav uk-dropdown-nav">
@@ -551,10 +555,10 @@ const localeImgUrl = computed(() => locale.value == 'ru'?ruSvg:enSvg)
                       <a href="#choose-rase" uk-toggle>Зарегистрировать еще аккаунт</a>
                     </li>
                     <li>
-                      <a href="#" @click.prevent="showAccountModal">Сменить расу</a>
+                      <a @click="showAccountModal">Сменить расу</a>
                     </li>
                     <li>
-                      <a href="#">Выйти</a>
+                      <a @click="auth.logout">Выйти</a>
                     </li>
                   </ul>
                 </div>

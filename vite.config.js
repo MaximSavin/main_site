@@ -14,5 +14,12 @@ export default defineConfig({
   },
   build: {
     target: 'esnext'
+  },
+  server: {
+    origin: 'https://maxim-dev.galaxyonline.io',
+    // hmr: {
+    //   port: 443
+    // }
+    // hmr: false
   }
 })
